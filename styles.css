@@ -47,10 +47,7 @@ nav ul li a {
         font-size: 14px !important;
         padding: 8px 12px !important;
     }
-    language-switcher button {
-        font-size: 6px; /* Küçük ekranlar için yazı boyutunu küçültün */
-        padding: 2px 4px; /* Padding'i azaltın */
-    }
+    
 }
 
 @media (max-width: 480px) {
@@ -58,9 +55,34 @@ nav ul li a {
         font-size: 12px !important;
         padding: 5px 8px !important;
     }
-    language-switcher button {
-        font-size: 4px; /* Küçük ekranlar için yazı boyutunu küçültün */
-        padding: 2px 4px; /* Padding'i azaltın */
+    
+}
+
+
+/* Masaüstü için menü */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mobil cihazlar için menüyü yatay kaydırılabilir yapma */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        overflow-x: auto; /* Yatay kaydırma ekler */
+        white-space: nowrap; /* Menü elemanlarını tek satırda tutar */
+        -webkit-overflow-scrolling: touch; /* Mobilde yumuşak kaydırma sağlar */
+    }
+
+    nav ul li {
+        flex: 0 0 auto; /* Elemanların kaydırılabilir olmasını sağlar */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Menü elemanlarına biraz boşluk bırakır */
     }
 }
 
