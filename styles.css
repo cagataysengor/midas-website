@@ -36,29 +36,24 @@ h1, p {
     color: #1E90FF; /* Lime Green rengi */
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around; /* Menüyü yatayda dağıtır */
-    list-style-type: none; /* Noktaları kaldırır */
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-/* Mobil cihazlar için menüyü dikey yapalım */
+/* 768px genişliğin altındaki cihazlar için (tablet ve telefon) */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Menüyü dikey yapar */
-        align-items: center; /* Menü elemanlarını ortalar */
+    body {
+        font-size: 14px;
+        padding: 10px;
     }
-
-    nav ul li {
-        width: 100%; /* Menü elemanlarının tam genişlikte olmasını sağlar */
-        text-align: center;
+    
+    /* Diğer responsive ayarlarınızı buraya ekleyebilirsiniz */
+    nav ul {
+        flex-direction: column; /* Menüleri dikey hizalar */
+    }
+    
+    /* Görsel boyutlarını ayarlamak için */
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
+
 
 
