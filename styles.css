@@ -35,3 +35,15 @@ h1, p {
 .custom-link {
     color: #1E90FF; /* Lime Green rengi */
 }
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Elemanları dar ekranlarda bir alt satıra geçirir */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Menüyü mobilde dikey yapar */
+    }
+}
+
