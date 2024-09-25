@@ -41,11 +41,17 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Tabletler için (max-width: 768px) */
+/* Tabletler ve mobil için (max-width: 768px) */
 @media (max-width: 768px) {
     nav ul {
+        display: flex;
+        flex-direction: column; /* Menü elemanlarını dikey sıralama */
         align-items: flex-start; /* Menü elemanlarını sola hizala */
-        justify-content: flex-start; /* Menü başlıklarını sola hizala */
+        justify-content: flex-start; /* Başlıkları sola hizala */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
     }
 
     nav ul li a {
@@ -64,11 +70,17 @@ nav ul li a {
     }
 }
 
-/* Mobil için (max-width: 480px) */
+/* Daha küçük mobil ekranlar (max-width: 480px) */
 @media (max-width: 480px) {
     nav ul {
+        display: flex;
+        flex-direction: column; /* Menü elemanlarını dikey sıralama */
         align-items: flex-start; /* Menü elemanlarını sola hizala */
-        justify-content: flex-start; /* Menü başlıklarını sola hizala */
+        justify-content: flex-start; /* Başlıkları sola hizala */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
     }
 
     nav ul li a {
@@ -86,6 +98,7 @@ nav ul li a {
         background-color: #1C86EE; /* Hover'da koyu mavi renk */
     }
 }
+
 
 
 
