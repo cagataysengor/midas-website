@@ -71,6 +71,11 @@ nav ul li a {
     nav ul li {
         margin: 10px 0; /* Menü elemanları arasındaki boşluk */
     }
+
+  .language-switcher button {
+        font-size: 12px; /* Daha küçük ekranlar için yazı boyutunu küçültün */
+        padding: 3px 6px; /* Küçük ekranlar için padding azaltın */
+    }
 }
 
 
