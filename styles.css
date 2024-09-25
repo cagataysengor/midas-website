@@ -41,63 +41,20 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Tabletler ve mobil için (max-width: 768px) */
+nav ul {
+    display: flex;
+    justify-content: space-around; /* Ekran genişliğine göre menü elemanlarını dağıtır */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     nav ul {
-        display: flex;
-        flex-direction: column; /* Menü elemanlarını dikey sıralama */
-        align-items: flex-start; /* Menü elemanlarını sola hizala */
-        justify-content: flex-start; /* Başlıkları sola hizala */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
-    }
-
-    nav ul li a {
-        text-align: left; /* Metni sola hizala */
-        font-size: 14px; /* Yazı boyutunu ayarla */
-        padding: 8px 12px;
-        width: 100%; /* Menü elemanlarının tam genişliği kaplamasını sağla */
-        background-color: #1E90FF; /* Mavi arka plan rengi */
-        color: #fff; /* Beyaz yazı */
-        border: none; /* Kenarları kaldır */
-        border-radius: 5px; /* Köşeleri yuvarla */
-    }
-
-    nav ul li a:hover {
-        background-color: #1C86EE; /* Hover'da koyu mavi renk */
+        flex-direction: column; /* Mobilde menüyü dikey yap */
     }
 }
 
-/* Daha küçük mobil ekranlar (max-width: 480px) */
-@media (max-width: 480px) {
-    nav ul {
-        display: flex;
-        flex-direction: column; /* Menü elemanlarını dikey sıralama */
-        align-items: flex-start; /* Menü elemanlarını sola hizala */
-        justify-content: flex-start; /* Başlıkları sola hizala */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
-    }
-
-    nav ul li a {
-        text-align: left; /* Metni sola hizala */
-        font-size: 12px; /* Daha küçük ekranlar için yazı boyutu */
-        padding: 5px 8px; /* Menü elemanları arasındaki boşluk */
-        width: 100%; /* Menü elemanlarının tam genişliği kaplamasını sağla */
-        background-color: #1E90FF; /* Mavi arka plan rengi */
-        color: #fff; /* Beyaz yazı */
-        border: none; /* Kenarları kaldır */
-        border-radius: 5px; /* Köşeleri yuvarla */
-    }
-
-    nav ul li a:hover {
-        background-color: #1C86EE; /* Hover'da koyu mavi renk */
-    }
-}
 
 
 
