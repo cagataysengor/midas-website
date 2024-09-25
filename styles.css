@@ -36,10 +36,25 @@ h1, p {
     color: #1E90FF; /* Lime Green rengi */
 }
 
-/* Viewport ile orantılı yazı boyutu */
+/* Masaüstü için yazı boyutu */
 nav ul li a {
-    font-size: 2vw; /* Ekran genişliğinin %2'si kadar yazı boyutu */
+    font-size: 18px;
 }
+
+/* Tabletler için (768px'den küçük ekranlar) */
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Mobil için (480px'den küçük ekranlar) */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
 
 
 
