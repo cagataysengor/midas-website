@@ -46,21 +46,31 @@ nav ul li a {
     nav ul li a {
         font-size: 14px !important;
         padding: 8px 12px !important;
+        background-color: #1E90FF !important; /* Mavi arka plan */
+        color: #fff !important; /* Beyaz metin */
+        border: none; /* Kenarlıkları kaldır */
+        border-radius: 5px; /* Köşeleri yuvarla */
     }
     nav ul {
-        flex-direction: column; /* Mobilde menüyü dikey yap */
+        flex-direction: column;
     }
 }
 
+/* Mobil için (480px'den küçük ekranlar) */
 @media (max-width: 480px) {
     nav ul li a {
         font-size: 12px !important;
         padding: 5px 8px !important;
+        background-color: #1E90FF !important; /* Mavi arka plan */
+        color: #fff !important; /* Beyaz metin */
+        border: none;
+        border-radius: 5px;
     }
     nav ul {
-        flex-direction: column; /* Mobilde menüyü dikey yap */
+        flex-direction: column;
     }
 }
+
 
 
 
