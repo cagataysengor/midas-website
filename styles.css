@@ -36,12 +36,11 @@ h1, p {
     color: #1E90FF; /* Lime Green rengi */
 }
 
-@media (max-width: 768px) {
-    nav ul li a {
-        padding: 15px; /* Menü elemanlarının dikeydeki boşluklarını küçültün */
-        font-size: 18px; /* Yazı boyutunu küçültün */
-    }
+/* Viewport ile orantılı yazı boyutu */
+nav ul li a {
+    font-size: 2vw; /* Ekran genişliğinin %2'si kadar yazı boyutu */
 }
+
 
 
 
