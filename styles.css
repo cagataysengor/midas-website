@@ -47,7 +47,9 @@ nav ul li a {
         font-size: 14px !important;
         padding: 8px 12px !important;
     }
-    
+    nav ul {
+        flex-direction: column; /* Mobilde menüyü dikey yap */
+    }
 }
 
 @media (max-width: 480px) {
@@ -55,54 +57,8 @@ nav ul li a {
         font-size: 12px !important;
         padding: 5px 8px !important;
     }
-    
-}
-
-
-
-
-/* 480px ve daha küçük ekranlar için menüyü en başa sabitleme */
-@media (max-width: 480px) {
-    nav {
-        position: fixed; /* Menü sabitlenir */
-        top: 0; /* Sayfanın en üstüne yerleşir */
-        left: 0;
-        width: 100%; /* Tam genişlikte */
-        z-index: 1000; /* Diğer içeriklerin üstünde */
-        background-color:  #1E90FF; /* Arka plan rengi */
-    }
-
-    /* Sayfa içeriğinin menünün altından başlaması için boşluk bırak */
-    body {
-        margin-top: 60px; /* Menünün yüksekliği kadar boşluk bırak */
-    }
-
-    /* Menü elemanlarını dikey hizala */
     nav ul {
-        display: flex;
-        flex-direction: column; /* Dikey hizalama */
-        margin: 0;
-        padding: 0;
-        align-items: flex-start; /* Elemanları sola hizala, ortada olmasın */
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
-    }
-
-    nav ul li a {
-        padding: 10px 15px;
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 100%; /* Tüm genişliği kaplasın */
-        text-align: left; /* Metni sola hizala */
-    }
-
-    nav ul li a:hover {
-        background-color: #444; /* Hover efekti */
+        flex-direction: column; /* Mobilde menüyü dikey yap */
     }
 }
 
