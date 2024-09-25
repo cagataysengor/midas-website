@@ -44,13 +44,23 @@ nav ul li a {
 /* Mobil ve küçük tabletler için (max-width: 768px) */
 @media (max-width: 768px) {
     nav ul {
-        align-items: flex-start; /* Elemanları sola hizala */
+        align-items: flex-start; /* Menü elemanlarını sola hizala */
+        justify-content: flex-start; /* Menü başlıklarını sola hizala */
     }
 
     nav ul li a {
-        text-align: left; /* Başlıkları sola hizala */
+        text-align: left; /* Metni sola hizala */
         font-size: 14px; /* Yazı boyutunu ayarla */
         padding: 8px 12px;
+        width: 100%; /* Menü elemanlarının tam genişliği kaplamasını sağla */
+        background-color: #1E90FF; /* Mavi arka plan rengi */
+        color: #fff; /* Beyaz yazı */
+        border: none; /* Kenarları kaldır */
+        border-radius: 5px; /* Köşeleri yuvarla */
+    }
+
+    nav ul li a:hover {
+        background-color: #1C86EE; /* Hover'da koyu mavi renk */
     }
 }
 
@@ -58,10 +68,12 @@ nav ul li a {
 @media (max-width: 480px) {
     nav ul li a {
         font-size: 12px; /* Daha küçük ekranlar için yazı boyutu */
-        padding: 5px 8px; /* İçerik etrafındaki boşluk */
+        padding: 5px 8px; /* Menü elemanları arasındaki boşluk */
         text-align: left; /* Metni sola hizala */
+        width: 100%; /* Menü elemanlarının tam genişliği kaplamasını sağla */
     }
 }
+
 
 
 
