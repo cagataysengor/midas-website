@@ -61,18 +61,18 @@ nav ul li a {
 
 
 
-/* 480px ve daha küçük ekranlar için menüyü sabitleme ve dikey sıralama */
+/* 480px ve daha küçük ekranlar için menüyü en başa sabitleme */
 @media (max-width: 480px) {
     nav {
-        position: fixed; /* Menüyü ekranın üstüne sabitle */
-        top: 0;
+        position: fixed; /* Menü sabitlenir */
+        top: 0; /* Sayfanın en üstüne yerleşir */
         left: 0;
-        width: 100%; /* Tam genişlikte yap */
-        z-index: 1000; /* Diğer içeriklerin üstüne çıkar */
-        background-color: #333; /* Arka plan rengini ayarla */
+        width: 100%; /* Tam genişlikte */
+        z-index: 1000; /* Diğer içeriklerin üstünde */
+        background-color: #333; /* Arka plan rengi */
     }
 
-    /* Sayfa içeriğinin menünün altında başlaması için boşluk bırak */
+    /* Sayfa içeriğinin menünün altından başlaması için boşluk bırak */
     body {
         margin-top: 60px; /* Menünün yüksekliği kadar boşluk bırak */
     }
@@ -81,30 +81,31 @@ nav ul li a {
     nav ul {
         display: flex;
         flex-direction: column; /* Dikey hizalama */
-        align-items: center; /* Menü elemanlarını ortala */
         margin: 0;
         padding: 0;
+        align-items: flex-start; /* Elemanları sola hizala, ortada olmasın */
     }
 
     nav ul li {
-        margin: 5px 0; /* Menü elemanları arasındaki boşluğu küçült */
+        margin: 5px 0; /* Menü elemanları arasındaki boşluk */
     }
 
     nav ul li a {
-        padding: 10px 15px; /* Menü elemanları etrafındaki boşluk */
+        padding: 10px 15px;
         display: block;
         color: #fff;
         text-decoration: none;
-        border: 1px solid #ccc; /* İnce bir kenarlık */
-        border-radius: 5px; /* Köşeleri yuvarla */
-        width: 90%; /* Menü elemanlarını genişlet */
-        text-align: center; /* Metni ortala */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%; /* Tüm genişliği kaplasın */
+        text-align: left; /* Metni sola hizala */
     }
 
     nav ul li a:hover {
-        background-color: #444; /* Hover rengi */
+        background-color: #444; /* Hover efekti */
     }
 }
+
 
 
 
