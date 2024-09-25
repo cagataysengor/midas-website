@@ -57,17 +57,22 @@ nav ul li a {
 }
 
 
-body {
-    overflow-x: hidden; /* Yatay kaydırmayı engeller */
-    margin: 0;
-    padding: 0;
-}
-
+/* Mobil cihazlar için menüyü yatay kaydırılabilir yapma */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Mobilde menüyü dikey yap */
+        display: flex;
+        overflow-x: auto; /* Yatay kaydırma ekler */
+        white-space: nowrap; /* Menü elemanlarını tek satırda tutar */
+        -webkit-overflow-scrolling: touch; /* Mobilde yumuşak kaydırma sağlar */
+    }
+
+    nav ul li {
+        flex: 0 0 auto; /* Elemanların kaydırılabilir olmasını sağlar */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Menü elemanlarına biraz boşluk bırakır */
     }
 }
-
 
 
