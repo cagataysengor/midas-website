@@ -36,24 +36,13 @@ h1, p {
     color: #1E90FF; /* Lime Green rengi */
 }
 
-/* 768px genişliğin altındaki cihazlar için (tablet ve telefon) */
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-    
-    /* Diğer responsive ayarlarınızı buraya ekleyebilirsiniz */
-    nav ul {
-        flex-direction: column; /* Menüleri dikey hizalar */
-    }
-    
-    /* Görsel boyutlarını ayarlamak için */
-    img {
-        max-width: 100%;
-        height: auto;
+    nav ul li a {
+        padding: 15px; /* Menü elemanlarının dikeydeki boşluklarını küçültün */
+        font-size: 18px; /* Yazı boyutunu küçültün */
     }
 }
+
 
 
 
