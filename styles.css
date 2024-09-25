@@ -57,6 +57,11 @@ nav ul li a {
 }
 
 
+body {
+    overflow-x: hidden; /* Yatay kaydırmayı engeller */
+    margin: 0;
+    padding: 0;
+}
 
 
 
