@@ -50,9 +50,11 @@ nav ul li a {
         color: #fff !important; /* Beyaz metin */
         border: none; /* Kenarlıkları kaldır */
         border-radius: 5px; /* Köşeleri yuvarla */
+        text-align: left !important; /* Başlıkları sola hizala */
     }
     nav ul {
         flex-direction: column;
+        align-items: flex-start; /* Menü elemanlarını sola hizala */
     }
 }
 
@@ -65,11 +67,14 @@ nav ul li a {
         color: #fff !important; /* Beyaz metin */
         border: none;
         border-radius: 5px;
+        text-align: left !important; /* Başlıkları sola hizala */
     }
     nav ul {
         flex-direction: column;
+        align-items: flex-start; /* Menü elemanlarını sola hizala */
     }
 }
+
 
 
 
