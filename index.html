@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDAS Research Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        /* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /*font-weight: bold; */ /* Yazıları kalın yapar */
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0; /* Başlık alanını büyüttük */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Menü yazı boyutunu artırdık */
+}
+
+nav ul li a:hover {
+    background-color: #003d80;
+    border-radius: 5px;
+}
+
+/* Dil Seçimi Butonu */
+.language-switcher {
+    position: absolute;
+    right: 20px;
+    top: 15px; /* Dil butonları yüksekliğe uygun hale getirildi */
+}
+
+.language-switcher button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Buton boyutu artırıldı */
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Dil butonları yazı boyutu artırıldı */
+}
+
+.language-switcher button:hover {
+    background-color: #003d80;
+}
+
+/* Sabit Header Alanı Boşluğu */
+.header-space {
+    height: 70px; /* Header alanını büyüttüğümüz için boşluk artırıldı */
+}
+
+/* İçerik Alanı */
+section {
+    padding: 60px 20px;
+}
+
+/* İçerik Başlıkları */
+h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-top: 0;
+}
+
+p, li {
+    font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Sabit Menü -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+                <li><a href="research.html" data-en="Research" data-tr="Araştırmalar">Research</a></li>
+                <li><a href="team.html" data-en="Our Team" data-tr="Ekibimiz">Our Team</a></li>
+                <li><a href="publications.html" data-en="Publications" data-tr="Yayınlar">Publications</a></li>
+                <li><a href="lab.html" data-en="Lab Facilities" data-tr="Laboratuvar Olanakları">Lab Facilities</a></li>
+                <li><a href="contact.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Dil Seçimi Butonu -->
+        <div class="language-switcher">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+	
+		
+
+    </header>
+
+    
+
+    <!-- Dil Değiştirme Scripti -->
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+            localStorage.setItem('language', lang); // Dil bilgisini kaydet
+        }
+
+        // Sayfa yüklendiğinde dil ayarını kontrol et ve uygula
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = localStorage.getItem('language') || 'en'; // Varsayılan dil İngilizce
+            setLanguage(lang);
+        });
+    </script>
+
+    <!-- Header Boşluğu -->
+    <div class="header-space"></div>
+
+    <!-- Ana Sayfa İçeriği -->
+   <body>
+  <div class="background-container"></div> <!-- Arka plan görseli burada -->
+  
+  <div class="content">
+    <h1 data-en="Welcome to MIDAS Research Group" data-tr="MIDAS Araştırma Grubuna Hoşgeldiniz">Welcome to MIDAS Research Group</h1>
+        <p data-en="Our research focuses on 2D materials and nanotechnology." data-tr="Araştırmamız 2D malzemeler ve nanoteknoloji üzerine odaklanıyor.">Our research focuses on 2D materials and nanotechnology.</p>
+  </div>
+</body>
+
+
+    <section id="home">
+    <h2 data-en="MIDAS Research Group" data-tr="MIDAS Araştırma Grubuna Hoşgeldiniz">Welcome to MIDAS Research Group</h2>
+    <p data-en="Innovative research on nanotechnology and 2D materials." 
+       data-tr="Nanoteknoloji ve 2D malzemeler üzerine yenilikçi araştırmalar.">Innovative research on nanotechnology and 2D materials.</p>
+
+    <!-- New "About Us" section -->
+    <h3 data-en="About Us" data-tr="Hakkımızda">About Us</h3>
+
+    <!-- English and Turkish versions -->
+    <p data-en="The fully equipped MIDAS (Micro/nano Devices and Systems) laboratory, spanning 360 m², includes a state-of-the-art clean room established in 2014 with an investment of over 5 million Euros. It is designed for the development, production, and analysis of various materials and devices such as photodetectors, transistors, supercapacitors, and sensors. The MIDAS Group focuses on nanoelectronics and photonics, particularly in device manufacturing, optoelectronic testing, and nano-materials growth, like graphene and transition metal chalcogenides, through chemical vapor deposition (CVD). Since its inception, the group has published over 20 papers in SCI journals on large-area 2D materials grown via CVD and devices based on 2D materials. These devices include transistors, photodetectors, supercapacitors, and biosensors, with innovative approaches for large-scale material growth. The group consists of 4 Ph.D. students, 8 graduate students, and 4 undergraduates actively working in the labs." 
+       data-tr="Tam donanımlı MIDAS (Mikro/nano Cihazlar ve Sistemler) laboratuvarı, 360 m² büyüklüğündeki temiz oda ortamıyla, 2014 yılında 5 milyon Euro'nun üzerinde bir yatırımla kurulmuştur. Bu laboratuvar, fotodedektörler, transistörler, süperkapasitörler ve sensörler gibi çeşitli malzemelerin ve cihazların tasarımı, üretimi ve analizine yönelik olarak geliştirilmiştir. MIDAS Grubu, nanoelektronik ve fotonik alanında, özellikle cihaz üretimi, optoelektronik karakterizasyon ve grafen ile geçiş metali kalkojenürleri gibi nano malzemelerin kimyasal buhar biriktirme (CVD) ile büyütülmesi üzerinde çalışmaktadır. Kurulduğundan bu yana, grup CVD ile büyütülen geniş alanlı 2D malzemeler ve bu malzemelere dayalı cihazlar hakkında 20'den fazla SCI makalesi yayımlamıştır. Cihazlarımız arasında transistörler, fotodedektörler, süperkapasitörler ve biyosensörler yer almakta olup, malzeme büyütme konusunda yenilikçi yaklaşımlar sunulmaktadır. Laboratuvarlarımızda 4 doktora öğrencisi, 8 yüksek lisans öğrencisi ve 4 lisans öğrencisi aktif olarak çalışmaktadır.">The fully equipped MIDAS (Micro/nano Devices and Systems) laboratory...</p>
+       
+	 <p data-en="We specialize in the large-scale, controlled production of various 2D materials (such as graphene, MXene, and transition metal chalcogenides) using chemical vapor deposition (CVD). Our expertise significantly supports research that requires the production, transfer, and fabrication of devices from single or multi-layer, uniform films, and sheets. Additionally, our group has demonstrated proficiency in both active and passive thin-film photonic materials, integrated optical amplifiers, and on-chip waveguide lasers. We operate three different CVD systems, enabling the growth of various 2D materials (including alloys) with tailored properties. Our advanced tools, such as μ-Raman spectroscopy (with a temperature stage), FTIR, and AFM, provide rapid and comprehensive material characterization. Alongside this growth capability, we possess in-depth knowledge of transferring different 2D materials, including MXene, allowing us to handle complete packages involving growth, transfer, and device fabrication." 
+       data-tr="Grafen, MXene ve geçiş metali kalkojenürleri gibi çeşitli 2D malzemelerin geniş alanlı ve kontrollü üretimi konusunda kimyasal buhar biriktirme (CVD) yöntemini kullanarak uzmanlaştık. Tek veya çok katmanlı, üniform film ve tabakalarla yapılan üretim, transfer ve cihaz üretimi gerektiren araştırmalara önemli katkılar sağlıyoruz. Ayrıca, grubumuz aktif ve pasif ince film fotonik malzemeleri, entegre optik yükselticiler ve çip üstü katı hal dalga kılavuzu lazerleri konusunda da kanıtlanmış bir uzmanlığa sahiptir. Üç farklı CVD sistemimiz, özel özelliklere sahip çeşitli 2D malzemeleri (alaşımlar dahil) büyütmemize olanak tanıyor. μ-Raman spektroskopisi (sıcaklık sahnesi ile birlikte), FTIR ve AFM gibi gelişmiş cihazlarımız hızlı ve kapsamlı malzeme karakterizasyonu sağlar. Bu büyütme kabiliyetine ek olarak, MXene gibi farklı 2D malzemelerin transferi konusunda derin bir bilgi birikimine sahibiz, bu da büyütme, transfer ve cihaz üretimi içeren tüm paketleri üstlenmemizi mümkün kılıyor.">The fully equipped MIDAS (Micro/nano Devices and Systems) laboratory...</p>
+
+
+   <h3 data-en="Our Mission" data-tr="Misyonumuz">Our Mission</h3>
+<p data-en="At MIDAS, our mission is to lead the frontier of scientific exploration by developing groundbreaking technologies in nanotechnology and 2D materials. 
+We are dedicated to advancing the understanding of these innovative materials, transforming our discoveries into practical solutions that address real-world challenges. 
+By fostering an environment of collaboration, creativity, and rigorous research, we aim to drive advancements in electronic, optoelectronic devices and contribute to the betterment of society. 
+Our commitment to education and outreach ensures that we not only innovate but also share knowledge, empowering the next generation of scientists and engineers."
+   data-tr="MIDAS'ta misyonumuz, nanoteknoloji ve 2D malzemeler alanında çığır açan teknolojiler geliştirerek bilimsel keşiflerin sınırlarını zorlamaktır. 
+Yenilikçi araştırmaları, gerçek dünya sorunlarına çözüm getiren pratik uygulamalara dönüştürmeyi amaçlıyoruz. 
+İş birliği, yaratıcılık ve titiz araştırma ortamını teşvik ederek, elektronik ve optoelektronik cihazlar alanında ilerlemeyi hedefliyoruz ve topluma katkıda bulunmayı amaçlıyoruz. 
+Eğitim ve iletişim konusundaki kararlılığımız, yalnızca yenilik yapmakla kalmayıp aynı zamanda bilgi paylaşarak gelecek nesil bilim insanlarını ve mühendisleri güçlendirmeyi sağlıyor.">
+   At MIDAS, our mission is to lead the frontier of scientific exploration by developing groundbreaking technologies in nanotechnology and 2D materials. 
+We are dedicated to advancing the understanding of these innovative materials, transforming our discoveries into practical solutions that address real-world challenges. 
+By fostering an environment of collaboration, creativity, and rigorous research, we aim to drive advancements in optoelectronic devices and contribute to the betterment of society. 
+Our commitment to education and outreach ensures that we not only innovate but also share knowledge, empowering the next generation of scientists and engineers.
+</p>
+
+    <h3 data-en="Our Vision" data-tr="Vizyonumuz">Our Vision</h3>
+<p data-en="We envision a future where nanotechnology and 2D materials revolutionize various industries, from electronics to healthcare. 
+In this future, our pioneering research will enable the development of more efficient, sustainable, and innovative products that enhance everyday life. 
+We aspire to be at the forefront of this transformation, actively collaborating with academic institutions, industry partners, and governmental agencies to bridge the gap between research and practical application. 
+Our vision is not just about technological advancement; it is about creating a sustainable world where science and technology work hand in hand to solve pressing global challenges."
+   data-tr="Nanoteknolojinin ve 2D malzemelerin, elektronikten sağlık hizmetlerine kadar çeşitli endüstrileri devrim niteliğinde değiştireceği bir geleceği hayal ediyoruz. 
+Bu gelecekte, öncü araştırmalarımız, günlük yaşamı zenginleştiren daha verimli, sürdürülebilir ve yenilikçi ürünlerin geliştirilmesine olanak tanıyacak. 
+Bu dönüşümün ön saflarında yer almayı, araştırma ile pratik uygulama arasındaki boşluğu kapatmak için akademik kurumlar, endüstri ortakları ve devlet ajansları ile aktif iş birliği yapmayı arzuluyoruz. 
+Vizyonumuz yalnızca teknolojik ilerleme ile ilgili değil; bilimin ve teknolojinin, acil küresel sorunları çözmek için el ele çalıştığı sürdürülebilir bir dünya yaratmayı hedefliyor.">
+   We envision a future where nanotechnology and 2D materials revolutionize various industries, from electronics to healthcare. 
+In this future, our pioneering research will enable the development of more efficient, sustainable, and innovative products that enhance everyday life. 
+We aspire to be at the forefront of this transformation, actively collaborating with academic institutions, industry partners, and governmental agencies to bridge the gap between research and practical application. 
+Our vision is not just about technological advancement; it is about creating a sustainable world where science and technology work hand in hand to solve pressing global challenges.
+</p>
+
+
+    <h3 data-en="Our Research Areas" data-tr="Araştırma Alanlarımız">Our Research Areas</h3>
+    <p data-en="Our research focuses on 2D materials, nanotechnology, and micro-scale optoelectronic devices, combining cutting-edge technology with advanced cleanroom fabrication techniques."
+       data-tr="Araştırmalarımız, 2D malzemeler, nanoteknoloji ve mikro ölçekli optoelektronik cihazlar üzerine yoğunlaşarak, en ileri teknolojiyi gelişmiş cleanroom üretim teknikleriyle birleştiriyor.">
+       Our research focuses on 2D materials, nanotechnology, and micro-scale optoelectronic devices, combining cutting-edge technology with advanced cleanroom fabrication techniques.
+    </p>
+    <a href="research.html" data-en="Learn More" data-tr="Daha Fazlasını Öğrenin" class="custom-link">Learn More</a>
+ 
+
+
+
+    <h3 data-en="Meet the Team" data-tr="Ekibimiz">Meet the Team</h3>
+    <p data-en="Our team consists of world-class researchers, engineers, and scientists who are dedicated to pushing the boundaries of what’s possible in material science and nanotechnology."
+       data-tr="Ekibimiz, malzeme bilimi ve nanoteknolojide mümkün olanın sınırlarını zorlamaya adanmış dünya çapında araştırmacılar, mühendisler ve bilim insanlarından oluşuyor.">
+       Our team consists of world-class researchers, engineers, and scientists who are dedicated to pushing the boundaries of what’s possible in material science and nanotechnology.
+    </p>
+    <a href="team.html" data-en="Meet Our Team" data-tr="Ekibimizle Tanışın" class="custom-link">Meet Our Team</a>
+
+    <h3 data-en="Latest Publications" data-tr="Son Yayınlarımız">Latest Publications</h3>
+    <ul>
+        <li
+
+
+    <footer>
+        <p>&copy; 2024 MIDAS Research Group. All rights reserved.</p>
+    </footer>
+
+     
+    <script>
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+            el.innerHTML = el.getAttribute('data-' + lang);
+        });
+        localStorage.setItem('language', lang); // Dil bilgisini kaydet
+    }
+
+    // Sayfa yüklendiğinde dil ayarını kontrol et ve uygula
+    document.addEventListener('DOMContentLoaded', () => {
+        const lang = localStorage.getItem('language') || 'en'; // Varsayılan dil İngilizce
+        setLanguage(lang);
+    });
+</script>
+
+
+ 
+
+</body>
+</html>

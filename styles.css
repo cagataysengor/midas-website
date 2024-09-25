@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('dunya-atom.png'); /* Arka plan görseli */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Yazıların net görünmesi için beyaz renk */
+  min-height: 100vh; /* Sayfa yüksekliğini tarayıcı penceresine göre ayarla */
+  background-attachment: fixed; /* Arka planı sabitler, kaydırma ile hareket etmez */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* %50 siyah yarı saydam katman */
+  z-index: -1; /* Bu katmanın yazıların arkasında kalmasını sağlar */
+}
+
+
+
+/* Yazıların opaklığı etkilenmez */
+h1, p {
+  z-index: 1; /* Yazılar katmanın üstünde kalır */
+  position: relative; /* Yazıları katmandan ayırır */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Yazılara gölge ekleyin, daha belirgin olur */
+}
+
+.custom-link {
+    color: #1E90FF; /* Lime Green rengi */
+}

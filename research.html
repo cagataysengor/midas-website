@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDAS - Research</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0; /* Başlık alanını büyüttük */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Menü yazı boyutunu artırdık */
+}
+
+nav ul li a:hover {
+    background-color: #003d80;
+    border-radius: 5px;
+}
+
+/* Dil Seçimi Butonu */
+.language-switcher {
+    position: absolute;
+    right: 20px;
+    top: 15px; /* Dil butonları yüksekliğe uygun hale getirildi */
+}
+
+.language-switcher button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px; /* Buton boyutu artırıldı */
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px; /* Dil butonları yazı boyutu artırıldı */
+}
+
+.language-switcher button:hover {
+    background-color: #003d80;
+}
+
+/* Sabit Header Alanı Boşluğu */
+.header-space {
+    height: 70px; /* Header alanını büyüttüğümüz için boşluk artırıldı */
+}
+
+/* İçerik Alanı */
+section {
+    padding: 60px 20px;
+}
+
+/* İçerik Başlıkları */
+h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-top: 0;
+}
+
+p, li {
+    font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Sabit Menü -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-en="Home" data-tr="Ana Sayfa">Home</a></li>
+    		<li><a href="research.html" data-en="Research" data-tr="Araştırmalar">Research</a></li>
+    		<li><a href="team.html" data-en="Our Team" data-tr="Ekibimiz">Our Team</a></li>
+    		<li><a href="publications.html" data-en="Publications" data-tr="Yayınlar">Publications</a></li>
+    		<li><a href="lab.html" data-en="Lab Facilities" data-tr="Laboratuvar Olanakları">Lab Facilities</a></li>
+    		<li><a href="contact.html" data-en="Contact" data-tr="İletişim">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Dil Seçimi Butonu -->
+        <div class="language-switcher">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+    </header>
+
+    <!-- Header Boşluğu -->
+    <div class="header-space"></div>
+
+    <!-- Araştırmalar İçeriği -->
+    <section id="research">
+        <h2 data-en="Our Research" data-tr="Araştırmalarımız">Our Research</h2>
+        <p data-en="At MIDAS, we conduct pioneering research on 2D materials, clean room technologies, and micro-scale optoelectronic devices."
+           data-tr="MIDAS'ta 2D malzemeler, clean room teknolojileri ve mikro ölçekte optoelektronik cihazlar üzerine öncü araştırmalar yürütüyoruz.">At MIDAS, we conduct pioneering research on 2D materials, clean room technologies, and micro-scale optoelectronic devices.</p>
+
+<!-- Research Topics Heading -->
+    <h3 data-en="Research Topics" data-tr="Araştırma Konuları">Research Topics</h3>
+
+    <!-- Active Materials Section -->
+    <h4 data-en="Active Materials" data-tr="Aktif Malzemeler">Active Materials</h4>
+    <ul>
+        <li data-en="Rare-earth doped films" data-tr="Nadir toprak elementleri katkılı filmler">Nadir toprak elementleri katkılı filmler</li>
+        <li data-en="2D Materials" data-tr="2 Boyutlu Malzemeler">2 Boyutlu Malzemeler</li>
+        <ul style="margin-left: 20px;">
+            <li data-en="Graphene" data-tr="Grafen">Grafen</li>
+            <li data-en="Transition metal chalcogenides" data-tr="Geçiş metal kalkojenitler">Geçiş metal kalkojenitler</li>
+            <li data-en="Mxenes" data-tr="Mxeneler">Mxeneler</li>
+            <li data-en="Alloys and heterostructures" data-tr="Melez ve heteroyapılar">Melez ve heteroyapılar</li>
+        </ul>
+    </ul>
+
+    <!-- Optoelectronic Devices Section -->
+    <h4 data-en="Optoelectronic Devices" data-tr="Optoelektronik Aygıtlar">Optoelectronic Devices</h4>
+    <ul>
+        <li data-en="Waveguides" data-tr="Dalga Kılavuzları">Dalga Kılavuzları</li>
+        <li data-en="Photodetectors" data-tr="Fotodetektörler">Fotodetektörler</li>
+        <li data-en="Solar cells" data-tr="Güneş gözeleri">Güneş gözeleri</li>
+        <li data-en="Transistors" data-tr="Transistörler">Transistörler</li>
+        <li data-en="LEDs" data-tr="LED’ler">LED’ler</li>
+        <li data-en="Solid-state lasers" data-tr="Katı hal lazerler">Katı hal lazerler</li>
+        <li data-en="Optical amplifiers" data-tr="Optik yükselteçler">Optik yükselteçler</li>
+    </ul>
+
+        <!-- Key Projects Heading -->
+    <h3 data-en="Key Projects" data-tr="Önemli Projeler">Key Projects</h3>
+    
+    <!-- Research Projects List -->
+    <ul>
+        <!-- First Project -->
+        <li>
+            <h4 data-en=" TÜBİTAK 1004 – 20AG001 Strategic R&D Collaboration for Electronic and Optical Component Production with High Technology Platforms for Advanced Materials" 
+                data-tr=" TÜBİTAK 1004 – 20AG001 İleri Malzeme Yüksek Teknoloji Platformları ile Elektronik ve Optik Bileşen Üretimi için Stratejik Ar-Ge Birliği">
+                * TÜBİTAK 1004 – 20AG001 Strategic R&D Collaboration for Electronic and Optical Component Production with High Technology Platforms for Advanced Materials
+            </h4>
+            <p data-en="MIDAS is a stakeholder in this strategic R&D project with the subcode (20AG025), contributing to the provision of 2D materials for various research and development purposes."
+               data-tr="MIDAS, bu stratejik Ar-Ge projesinde (20AG025) koduyla paydaş olarak yer almakta ve çeşitli araştırma ve geliştirme amaçları için 2B malzemelerin sağlanmasına katkıda bulunmaktadır.">
+               MIDAS is a stakeholder in this strategic R&D project with the subcode (20AG025), contributing to the provision of 2D materials for various research and development purposes.
+            </p>
+        </li>
+
+         <!-- Second Project -->
+        <li>
+            <h4 data-en=" TÜBİTAK 1003 – 118E996 Frequency-Locked Single Photon Generator for Quantum Computing Technologies (KÜBİT-FuTURE)" 
+                data-tr=" TÜBİTAK 1003 – 118E996 Kuantum Bilişimi Teknolojileri için Frekans Kilitli Tek Foton Üreteci (KÜBİT-FuTURE)">
+                 TÜBİTAK 1003 – 118E996 Frequency-Locked Single Photon Generator for Quantum Computing Technologies (KÜBİT-FuTURE)
+            </h4>
+            <p data-en="This project aims to develop a frequency-locked single photon generator for quantum computing technologies."
+               data-tr="Bu proje, kuantum bilişimi teknolojileri için frekans kilitli tek foton üreteci geliştirmeyi hedeflemektedir.">
+               This project aims to develop a frequency-locked single photon generator for quantum computing technologies.
+            </p>
+        </li>
+
+        <!-- Third Project -->
+        <li>
+            <h4 data-en=" TÜBİTAK 1001 - 124E061 High-Performance Supercapacitors Based on MXene Electrodes Produced by Chemical Vapor Deposition" 
+                data-tr=" TÜBİTAK 1001 - 124E061 Kimyasal Buhar Biriktirme Yöntemi ile Üretilmiş Mxene Elektrot Tabanlı Yüksek Performanslı Süperkapasitörler">
+                 TÜBİTAK 1001 - 124E061 High-Performance Supercapacitors Based on MXene Electrodes Produced by Chemical Vapor Deposition
+            </h4>
+            <p data-en="This project focuses on developing high-performance supercapacitors using MXene electrodes produced via chemical vapor deposition (CVD)."
+               data-tr="Bu proje, kimyasal buhar biriktirme (CVD) yöntemi ile üretilmiş MXene elektrotlarına dayalı yüksek performanslı süperkapasitörler geliştirmeye odaklanmaktadır.">
+               This project focuses on developing high-performance supercapacitors using MXene electrodes produced via chemical vapor deposition (CVD).
+            </p>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1001 – 114E594 Innovative High-Gain Solid-State Photonic Amplifiers for Optical Interconnects between Cards and Chips" 
+                data-tr="TÜBİTAK 1001 – 114E594 Kartlar ve Çipler Arası Optik Veri Yolları Uygulamaları İçin Yenilikçi, Yüksek Kazançlı, Katı Hal Fotonik Yükselteç Aygıtlar">
+                TÜBİTAK 1001 – 114E594 Innovative High-Gain Solid-State Photonic Amplifiers for Optical Interconnects between Cards and Chips
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1003 – 116F445 COST-Inspired Innovative Optimization Methods for Atomically Thin MoS2 and Similar 2D Transition Metal Chalcogenides" 
+                data-tr="TÜBİTAK 1003 – 116F445 COST Doğadan İlham Alan Yenilikçi Optimizasyon Yöntemlerinin Tek Atomik Katmanlı MoS2 ve Benzeri İki Boyutlu Geçiş Metal Kalkojenitleri İçin Potansiyel Geliştirme Çalışmalarına Uygulanması">
+                TÜBİTAK 1003 – 116F445 COST Doğadan İlham Alan Yenilikçi Optimizasyon Yöntemleri
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1001 – 124E061 High-Performance Supercapacitors Based on MXene Electrodes Produced by Chemical Vapor Deposition" 
+                data-tr="TÜBİTAK 124E061 Kimyasal Buhar Biriktirme Yöntemi ile Üretilmiş MXene Elektrot Tabanlı Yüksek Performanslı Süperkapasitörler">
+                TÜBİTAK 124E061 High-Performance Supercapacitors Based on MXene Electrodes Produced by Chemical Vapor Deposition
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1003 – 19ADP050 Large Area Growth of Transition Metal Chalcogenides by CVD" 
+                data-tr="TÜBİTAK 1003 – 19ADP050 Cam Destekli Kimyasal Buhar Biriktirme Yöntemi ile Geniş Alanlı Geçiş Metal Kalkojenlerinin Büyütülmesi">
+                TÜBİTAK 1003 – 19ADP050 Cam Destekli CVD ile Geçiş Metal Kalkojenlerinin Büyütülmesi
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1003 – 20ADP099 Synthesis and Characterization of Metal/Nano Particles Coated with Biopolymers for Catalytic Applications" 
+                data-tr="TÜBİTAK 1003 – 20ADP099 Katalitik Uygulamalara Yönelik Biyopolimerlerle Kaplı Metalik Mikro/Nano Partiküllerin Sentezi ve Karakterizasyonu">
+                TÜBİTAK 1003 – 20ADP099 Biyopolimer Kaplı Metalik Mikro/Nano Partiküllerin Sentezi ve Karakterizasyonu
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1003 – 19ADP052 Modeling and Production of On-Chip Integrated Optical Waveguides" 
+                data-tr="TÜBİTAK 1003 – 19ADP052 Çip Üstü Tümleşik Optik Dalga Kılavuzlarının Modellenmesi ve Üretimi">
+                TÜBİTAK 1003 – 19ADP052 Çip Üstü Tümleşik Optik Dalga Kılavuzları
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="TÜBİTAK 1801F020 2D GMK Alloys, Heterostructures, and Devices" 
+                data-tr="TÜBİTAK 1801F020 2B GMK Alaşımları, Heteroyapılar ve Aygıtlar">
+                TÜBİTAK 1801F020 2D GMK Alaşımları ve Heteroyapılar
+            </h4>
+        </li>
+
+        <!-- Other Research Projects (without TÜBİTAK prefix) -->
+        <li>
+            <h4 data-en="BAP – Single-Layer Ti2C Crystal Growth via Chemical Vapor Deposition" 
+                data-tr="BAP – Tek Katmanlı Ti2C Kristalinin CVD ile Sentezi ve Optimizasyonu">
+                BAP – Tek Katmanlı Ti2C Kristalinin CVD ile Sentezi ve Optimizasyonu
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1306F279 – Development of Photonic Amplifier Devices" 
+                data-tr="BAP 1306F279 – Fotonik Yükselteç Aygıtları Geliştirme">
+                BAP 1306F279 – Fotonik Yükselteç Aygıtları Geliştirme
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1407F335 – Innovative Functional Optoelectronic Structures for Micro-Nano Systems" 
+                data-tr="BAP 1407F335 – Mikro-Nano Sistemler İçin Yenilikçi Fonksiyonel Optoelektronik Yapılar">
+                BAP 1407F335 – Mikro-Nano Sistemler İçin Fonksiyonel Yapılar
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="Eczacıbaşı Arge – ALD Coating of Metal Surfaces for Enhanced Corrosion Resistance" 
+                data-tr="Eczacıbaşı Arge – Banyo Alanları Metal Yüzeylerinin ALD Yöntemi ile Kaplanması ve Üstün Korozyon Dayanımı Sağlanması">
+                Eczacıbaşı Arge – Metal Yüzeylerinin ALD Yöntemi ile Kaplanması
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1505F228 – Design and Experimental Realization of Dielectric Waveguides" 
+                data-tr="BAP 1505F228 – Dielektrik Dalga Kılavuzlarının Tasarımı ve Deneysel Gerçeklemesi">
+                BAP 1505F228 – Dielektrik Dalga Kılavuzlarının Tasarımı ve Deneysel Gerçeklemesi
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1605F368 – Development of Integrated Waveguide Device Test System" 
+                data-tr="BAP 1605F368 – Tümleşik Dalga Kılavuzu Aygıt Test Sisteminin Geliştirilmesi">
+                BAP 1605F368 – Tümleşik Dalga Kılavuzu Aygıt Test Sisteminin Geliştirilmesi
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1606F568 – Graphene-Based Heterostructures and Devices" 
+                data-tr="BAP 1606F568 – Grafen Tabanlı Heteroyapılar ve Aygıtlar">
+                BAP 1606F568 – Grafen Tabanlı Heteroyapılar ve Aygıtlar
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1606F569 – Rare-Earth Doped Dielectric Waveguide Amplifier Devices" 
+                data-tr="BAP 1606F569 – Nadir Toprak Element Katkılı Dielektrik Dalga Kılavuzu Yükselteç Aygıtlar">
+                BAP 1606F569 – Nadir Toprak Element Katkılı Dielektrik Dalga Kılavuzu Yükselteç Aygıtlar
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1705F329 – Development of Optoelectronic Measurement System for Graphene-Based MoS2 FET Devices" 
+                data-tr="BAP 1705F329 – Grafen Tabanlı MoS2 FET Aygıtların Optoelektronik Ölçüm Sisteminin Geliştirilmesi">
+                BAP 1705F329 – Grafen Tabanlı MoS2 FET Aygıtlarının Ölçüm Sistemi
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1705F265 – Investigation of Photoluminescence Characteristics for 2D WS2 and MoS2 and Design of 2D Heterostructures" 
+                data-tr="BAP 1705F265 – 2B WS2 ve MoS2 İçin Fotoışıma Karakteristiğinin Araştırılması ve 2B Heteroyapı Tasarımı">
+                BAP 1705F265 – WS2 ve MoS2 Fotoışıma Karakteristiğinin Araştırılması
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP 1801F020 – Applications of 2D Heterostructures and Devices" 
+                data-tr="BAP 1801F020 – İki Boyutlu Hetero Yapılar ve Aygıt Uygulamaları">
+                BAP 1801F020 – İki Boyutlu Hetero Yapılar ve Aygıt Uygulamaları
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP – Temperature-Dependent RAMAN Characterization of 2D Crystals" 
+                data-tr="BAP – İki Boyutlu Kristallerin Sıcaklık Bağımlı RAMAN Karakterizasyonu">
+                BAP – İki Boyutlu Kristallerin RAMAN Karakterizasyonu
+            </h4>
+        </li>
+
+        <li>
+            <h4 data-en="BAP – Microfabrication and Optimization of MoS2-Based Transistors" 
+                data-tr="BAP – MoS2 Tabanlı Transistör Mikro-Fabrikasyonu ve Optimizasyonu">
+                BAP – MoS2 Tabanlı Transistör Mikro-Fabrikasyonu ve Optimizasyonu
+            </h4>
+        </li>
+
+    </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MIDAS Research Group. All rights reserved.</p>
+    </footer>
+
+   <script>
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+            el.innerHTML = el.getAttribute('data-' + lang);
+        });
+        localStorage.setItem('language', lang); // Dil bilgisini kaydet
+    }
+
+    // Sayfa yüklendiğinde dil ayarını kontrol et ve uygula
+    document.addEventListener('DOMContentLoaded', () => {
+        const lang = localStorage.getItem('language') || 'en'; // Varsayılan dil İngilizce
+        setLanguage(lang);
+    });
+</script>
+
+
+</body>
+</html>
