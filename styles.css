@@ -38,12 +38,27 @@ h1, p {
 
 nav ul {
     display: flex;
-    flex-wrap: wrap; /* Elemanları dar ekranlarda bir alt satıra geçirir */
+    justify-content: space-around; /* Menüyü yatayda dağıtır */
+    list-style-type: none; /* Noktaları kaldırır */
+    padding: 0;
+    margin: 0;
 }
 
+nav ul li {
+    display: inline-block;
+}
+
+/* Mobil cihazlar için menüyü dikey yapalım */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Menüyü mobilde dikey yapar */
+        flex-direction: column; /* Menüyü dikey yapar */
+        align-items: center; /* Menü elemanlarını ortalar */
+    }
+
+    nav ul li {
+        width: 100%; /* Menü elemanlarının tam genişlikte olmasını sağlar */
+        text-align: center;
     }
 }
+
 
