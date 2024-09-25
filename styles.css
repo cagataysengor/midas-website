@@ -73,6 +73,10 @@ nav ul li a {
     nav ul li a {
         padding: 10px 15px; /* Menü elemanlarına biraz boşluk bırakır */
     }
+    nav ul {
+       -webkit-overflow-scrolling: touch; /* Mobil cihazlarda yumuşak kaydırma */
+}
+
 }
 
 
