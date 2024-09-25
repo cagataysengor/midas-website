@@ -62,7 +62,7 @@ nav ul li a {
 
 
 /* Menü elemanlarını dikey hale getirme (Mobil veya küçük ekranlar için) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     nav ul {
         flex-direction: column; /* Dikey hizalama */
         align-items: center; /* Menü elemanlarını ortala */
